@@ -1,0 +1,12 @@
+.box-sha {    
+    padding-right:30px; 
+    padding-top:20px;
+    padding-left:30px; 
+    
+    margin: 0px;
+    margin-left: 50px;
+    margin-top: 30px;
+    
+    background-color: white;
+    box-shadow: 10px 10px 10px #aaaaaa;
+}

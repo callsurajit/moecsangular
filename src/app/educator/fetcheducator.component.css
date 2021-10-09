@@ -1,0 +1,28 @@
+table {   
+    width: 100%;
+}
+  
+/* th {
+    text-align: left;
+    padding: 5px;
+}  */
+
+tr {
+    height:10px;
+}
+  
+/* tr:nth-child(even) {
+    background-color: rgb(195, 201, 231);
+} */
+.box-sha {    
+    padding: 50px;
+    padding-top:20px;
+    padding-left:20px;
+    
+    margin: 30px;
+    margin-left: 0px;
+    margin-top: 0px;
+    
+    background-color: white;
+    box-shadow: 10px 10px 10px #aaaaaa;
+}

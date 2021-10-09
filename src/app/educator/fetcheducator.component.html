@@ -1,0 +1,44 @@
+<h1 style="padding-left: 20px;padding-top:20px;">Educator List</h1>  
+<p *ngIf="!EducatorList"><em>Loading...</em></p> 
+<div class="box-sha">
+<table class="table table-bordered table-striped table-hover" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">  
+    <thead>  
+        <tr>  
+            <!-- <th>Educator Id</th> -->
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>ZipCode</th> 
+            <th>Actions</th>
+        </tr>  
+    </thead>  
+     <tbody>  
+        <tr *ngFor="let edu of EducatorList">  
+            <!-- <td>{{ edu.educatorID }}</td>   -->
+            <td>
+                <a [routerLink]="['/educator/view/', edu.educatorID]" > 
+                    {{ edu.firstName }}              
+                </a>  
+            </td>  
+            <td>{{ edu.lastName }}</td> 
+            <td>{{ edu.gender }}</td>  
+            <td>{{ edu.address }}</td>  
+            <td>{{ edu.city }}</td> 
+            <td>{{ edu.state }}</td> 
+            <td>{{ edu.zipCode }}</td>             
+            <!-- <td>   -->
+            <td>   
+                <a [routerLink]="['/educator/edit/', edu.educatorID]" >
+                    <mat-icon>edit</mat-icon>
+                </a>              
+                <i (click)="deleteEducator(edu.educatorID)" >
+                    <mat-icon>delete</mat-icon>
+                </i>               
+            </td>  
+        </tr>  
+    </tbody>   
+</table>
+</div>

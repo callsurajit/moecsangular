@@ -1,0 +1,27 @@
+<h1 style="padding-top:20px;">Certificate Details</h1> 
+<h3><b><u>Pending Certificate Applications</u></b></h3>
+<p>
+    There are no pending certificate applications on file.
+</p>
+<br>
+<h3><b><u>All Issued Certificates</u></b></h3>
+<table id="certList" class="table table-bordered table-striped" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">  
+    <thead>  
+        <tr>  
+            <th>Certificate #</th>
+            <th>Certificate Type</th>
+            <th>Status</th>
+            <th>Issue Date</th>
+            <th>Expiration Date</th>            
+        </tr>  
+    </thead> 
+    <tbody>  
+            <tr *ngFor="let cert of CertificateList">    
+            <td>{{ cert.certificateNumber }}</td> 
+            <td>{{ cert.licenseType }}</td>  
+            <td>{{ cert.status }}</td>   
+            <td>{{ cert.issueDate | date }}</td>   
+            <td>{{ cert.expirationDate | date }}</td>   
+            </tr>  
+    </tbody>   
+</table>   

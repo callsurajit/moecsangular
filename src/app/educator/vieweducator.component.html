@@ -1,0 +1,102 @@
+<!-- <div> -->
+    <h1 style="padding-left: 20px;padding-top:20px;">Educator Details</h1>  
+    <!-- <div class="container"> -->
+        <mat-tab-group style="padding-left: 20px;">
+            <mat-tab>         
+                <div class="box-sha">    
+                <ng-template mat-tab-label>
+                    <mat-icon>face</mat-icon>&nbsp;Profile
+                  </ng-template>
+                <br>
+                <div class="row">
+                    <h3><b>Full Name :</b></h3>&nbsp;<h3>{{Educator.lastName}}, {{Educator.firstName}}</h3>                   
+                </div>
+                <div class="row">
+                    <h3><b>Gender :</b></h3>&nbsp;<h3>{{Educator.gender}}</h3>
+                </div>
+                <div class="row">
+                    <h3><b>Address :</b></h3>&nbsp;<h3>{{Educator.address}}</h3>
+                </div>
+                <div class="row">
+                    <h3><b>City :</b></h3>&nbsp;<h3>{{Educator.city}}</h3>
+                </div>
+                <div class="row">
+                    <h3><b>State :</b></h3>&nbsp;<h3>{{Educator.state}}</h3>   
+                </div>
+                <div class="row">
+                    <h3><b>ZipCode :</b></h3>&nbsp;<h3>{{Educator.zipCode}}</h3>
+                </div>
+                <br><br>
+                <h3><b><u>Education History</u></b></h3>
+                <table id="eduList" class="table table-bordered table-striped" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">  
+                    <thead>  
+                        <tr>  
+                            <th>College/University Attended</th>
+                            <th>Degree</th>
+                            <th>Year Completed</th>                           
+                        </tr>  
+                    </thead>  
+                     <tbody>  
+                        <tr *ngFor="let edu of EducationList">    
+                            <td>{{ edu.college }}</td> 
+                            <td>{{ edu.degree }}</td>  
+                            <td>{{ edu.yearCompleted }}</td>   
+                        </tr>  
+                    </tbody>   
+                </table>   
+            </div>                
+            </mat-tab>
+            <mat-tab>        
+                <div class="box-sha">      
+                <ng-template mat-tab-label>
+                    <mat-icon>school</mat-icon>&nbsp;Certificates
+                </ng-template>
+                <br>
+                <mat-tab-group>
+                    <mat-tab>
+                        <ng-template mat-tab-label>
+                            <mat-icon>school</mat-icon>&nbsp;Certificates
+                        </ng-template>
+                        <app-certificate></app-certificate>
+                    </mat-tab>
+                    <mat-tab>
+                        <ng-template mat-tab-label>
+                            <mat-icon>fact_check</mat-icon>&nbsp;Permits
+                        </ng-template>
+                    </mat-tab>
+                    <mat-tab>
+                        <ng-template mat-tab-label>
+                            <mat-icon>verified_user</mat-icon>&nbsp;Career Authorization
+                        </ng-template>
+                    </mat-tab>
+                    <mat-tab>
+                        <ng-template mat-tab-label>
+                            <mat-icon>check</mat-icon>&nbsp;Approvals
+                        </ng-template>
+                    </mat-tab>
+                </mat-tab-group> 
+                </div>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <mat-icon>feedback</mat-icon>&nbsp;Remarks
+                </ng-template>
+            </mat-tab>
+            <mat-tab>                
+                <ng-template mat-tab-label>
+                    <mat-icon>attach_file</mat-icon>&nbsp;Documents
+                </ng-template>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <mat-icon>computer</mat-icon>&nbsp;Prof. Learning
+                </ng-template>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <mat-icon>thumb_up</mat-icon>&nbsp;Ratings
+                </ng-template>
+            </mat-tab>
+        </mat-tab-group>
+    <!-- </div> -->
+<!-- </div> -->

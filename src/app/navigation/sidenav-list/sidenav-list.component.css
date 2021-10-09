@@ -1,0 +1,19 @@
+mat-icon{
+    text-decoration: none;
+    color: white;
+}
+span:hover {
+    color: rgb(184, 61, 61);
+}
+
+.nav-caption{
+    display: inline-block;
+    padding-left: 6px;
+    color: white;
+}
+
+mat-divider {
+    background-color: white;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}

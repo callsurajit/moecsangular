@@ -1,0 +1,15 @@
+{
+    "/educator": {
+        "target": "https://moecsrep-api-gateway.azurewebsites.net",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true 
+    },
+
+    "/certificate": {
+        "target": "https://moecsrep-api-gateway.azurewebsites.net",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true 
+    }
+}
