@@ -11,5 +11,12 @@
         "secure": false,
         "logLevel": "debug",
         "changeOrigin": true 
+    },
+
+    "/upload": {
+        "target": "https://moecsrep-api-gateway.azurewebsites.net",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true 
     }
 }

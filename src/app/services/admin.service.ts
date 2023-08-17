@@ -2,16 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';  
 import { Observable, throwError } from 'rxjs'; 
 import { retry, catchError } from 'rxjs/operators';
-import { environment } from '../../environments/environment';
-import { Certificate } from '../models/certificate';
+import { DecisionTree } from '../models/decisionTree';
 
 @Injectable({
     providedIn: 'root'
 })  
 
-export class CertificateService {  
+export class AdminService {  
     constructor(private http: HttpClient) {} 
-    // endPoint = 'https://moecsrep-certificate-microservice.azurewebsites.net';
     httpHeader = {
         headers: new HttpHeaders({
           'Content-Type': 'application/json'
@@ -29,8 +27,8 @@ export class CertificateService {
         return throwError(message);
      }   
 
-    getCertificateDetails(id: number): Observable<Certificate[]> {  
-      return this.http.get<Certificate[]>('https://moecsrep-api-gateway.azurewebsites.net/certificate-service/certificate/' + id.toString())
+     getQuestionnaireTree(): Observable<DecisionTree> {  
+      return this.http.get<DecisionTree>('https://app-more-featureflag-poc.azurewebsites.net/Questionnaire/getdecisiontree')
       .pipe(
           retry(1),
           catchError(this.processError)

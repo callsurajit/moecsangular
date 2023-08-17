@@ -1,0 +1,28 @@
+.row {
+    margin-left: 0px;
+    margin-right: 0px;       
+}
+
+
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+    color:white;
+    background-color:#29323b;
+}
+
+p {
+    color:red;
+}
+
+.box-sha {    
+    padding: 60px;
+    padding-top:0px;
+    padding-left:20px;
+    width: 820px;
+    margin: 30px;
+    margin-left: 0px;
+    margin-top: 0px;
+    height:450px;
+    background-color: white;
+    box-shadow: 10px 10px 10px #aaaaaa;
+    background-color: transparent;
+}

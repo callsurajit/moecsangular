@@ -12,13 +12,6 @@ import { Education } from '../models/education';
 
 export class EducatorService {  
     constructor(private http: HttpClient) {}
-    // endPoint = 'http://localhost:38473';
-    //endPoint = 'https://moecsrep-api-gateway.azurewebsites.net';
-    // httpHeader = {
-    //     headers: new HttpHeaders({
-    //       'Content-Type': 'application/json'
-    //     })
-    //   }
 
       httpOptions = {
         headers: new HttpHeaders({
@@ -40,7 +33,7 @@ export class EducatorService {
      }
 
     getEducators(): Observable<Educator[]> {  
-        return this.http.get<Educator[]>('/educator-service/educator')
+        return this.http.get<Educator[]>('https://moecsrep-api-gateway.azurewebsites.net/educator-service/educator')
         .pipe(
             retry(1),
             catchError(this.processError)
@@ -48,7 +41,7 @@ export class EducatorService {
     }  
     
     getEducatorDetails(id: number): Observable<Educator> {  
-      return this.http.get<Educator>('/educator-service/educator/' + id.toString())
+      return this.http.get<Educator>('https://moecsrep-api-gateway.azurewebsites.net/educator-service/educator/' + id.toString())
       .pipe(
           retry(1),
           catchError(this.processError)
@@ -56,7 +49,7 @@ export class EducatorService {
     }  
 
     getEducattionDetails(id: number): Observable<Education[]> {  
-      return this.http.get<Education[]>('/educator-service/education/' + id.toString())
+      return this.http.get<Education[]>('https://moecsrep-api-gateway.azurewebsites.net/educator-service/education/' + id.toString())
       .pipe(
           retry(1),
           catchError(this.processError)

@@ -1,0 +1,10 @@
+<div class="box-sha">
+    <h1 style="padding-left: 20px;padding-top:20px;">Upload/Download Documents</h1> 
+    <br>
+    <ngx-dropzone  (change)="onSelect($event)">
+        <ngx-dropzone-label>Drop your document here</ngx-dropzone-label>  
+        <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">  
+            <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>  
+        </ngx-dropzone-preview>  
+    </ngx-dropzone>
+</div>

@@ -20,14 +20,21 @@ import { ViewEducatorComponent } from './educator/vieweducator.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
 import { ViewCertificateComponent } from './certificate/viewcertificates.component';  
+import { UploadDownloadComponent } from './uploaddownload/uploaddownload.component';  
+import { NgxDropzoneModule } from 'ngx-dropzone';
+import { AdminComponent } from './admin/admin.component';
+import { MatTreeModule } from "@angular/material/tree";
 
 @NgModule({
   declarations: [
     AppComponent,   
-    SidenavListComponent, NoPageFoundComponent,
+    SidenavListComponent, 
+    NoPageFoundComponent,
     FetchEducatorComponent,
     ViewEducatorComponent,
-    ViewCertificateComponent
+    ViewCertificateComponent,
+    UploadDownloadComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +51,9 @@ import { ViewCertificateComponent } from './certificate/viewcertificates.compone
     HttpClientModule,
     DataTablesModule,
     MatTabsModule,
-    MatCardModule
+    MatCardModule,
+    NgxDropzoneModule,
+    MatTreeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,12 +4,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { FetchEducatorComponent } from './educator/fetcheducator.component';  
 import { ViewEducatorComponent } from './educator/vieweducator.component';
 import { DashboardComponent } from './dashboard/dashboard.component'
+import { UploadDownloadComponent } from './uploaddownload/uploaddownload.component'
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'educator', component: FetchEducatorComponent },
   { path: 'educator/view/:id', component: ViewEducatorComponent }, 
-  // { path: 'certificate/view/:id', component: ViewCertificateComponent }, 
+  { path: 'upload-data', component: UploadDownloadComponent }, 
+  { path: 'admin', component: AdminComponent },
   { path: '**', component: NoPageFoundComponent }
 ];
 
